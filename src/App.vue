@@ -7,9 +7,19 @@ import menuBar from './components/MenuBar.vue';
 </script>
 
 <template>
-  <nav-bar></nav-bar>
-  <side-bar></side-bar>
+  <div class="side-bar-nav">
+    <side-bar></side-bar>
+    <nav-bar></nav-bar>
+  </div>
   <overlay-page></overlay-page>
   <menu-bar></menu-bar>
 </template>
+
+<style scoped>
+.side-bar-nav{
+  display: flex;
+  flex-direction: row;
+}
+
+</style>
 

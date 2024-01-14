@@ -76,6 +76,7 @@
     --twitter-light: #fff;
     --twitter-gray: #71767B;
     --twitter-blue: rgb(29, 155, 240);
+    --twitter-hover:#71767B50;
 }
 
 body {
@@ -96,3 +97,4 @@ body {
         display: none;
     }
 }
+

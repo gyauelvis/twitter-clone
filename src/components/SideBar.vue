@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="sidebar__btns">
-            <div class="sidebar__btns__item sidebar__btns__item--special">
+            <a href="#" class="sidebar__btns__item sidebar__btns__item--special">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
                     <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                         stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
@@ -36,8 +36,8 @@
                         </g>
                     </g>
                 </svg>
-            </div>
-            <div class="sidebar__btns__item sidebar__btns__item--special">
+            </a>
+            <a href="#" class="sidebar__btns__item sidebar__btns__item--special">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M8.99944 22L8.74881 18.4911C8.61406 16.6046 10.1082 15 11.9994 15C13.8907 15 15.3848 16.6046 15.2501 18.4911L14.9994 22"
@@ -47,8 +47,8 @@
                         stroke="#fff" stroke-width="1.5" stroke-linejoin="round" />
                 </svg>
                 <span class="roboto-bold">Home</span>
-            </div>
-            <div class="sidebar__btns__item sidebar__btns__item--special">
+            </a>
+            <a href="#" class="sidebar__btns__item sidebar__btns__item--special">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 6L8.91302 9.91697C11.4616 11.361 12.5384 11.361 15.087 9.91697L22 6" stroke="#fff"
                         stroke-width="1.5" stroke-linejoin="round" />
@@ -57,8 +57,8 @@
                         stroke="#fff" stroke-width="1.5" stroke-linejoin="round" />
                 </svg>
                 <span class="roboto-bold">Mail</span>
-            </div>
-            <div class="sidebar__btns__item sidebar__btns__item--special">
+            </a>
+            <a href="#" class="sidebar__btns__item sidebar__btns__item--special">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M5.15837 11.491C5.08489 12.887 5.16936 14.373 3.92213 15.3084C3.34164 15.7438 3 16.427 3 17.1527C3 18.1508 3.7818 19 4.8 19H19.2C20.2182 19 21 18.1508 21 17.1527C21 16.427 20.6584 15.7438 20.0779 15.3084C18.8306 14.373 18.9151 12.887 18.8416 11.491C18.6501 7.85223 15.6438 5 12 5C8.35617 5 5.34988 7.85222 5.15837 11.491Z"
@@ -70,9 +70,9 @@
                         stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 <span class="roboto-bold">Notification</span>
-            </div>
+            </a>
 
-            <div class="sidebar__btns__item sidebar__btns__item--special">
+            <a href="#" class="sidebar__btns__item sidebar__btns__item--special">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.5 17.5L22 22" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
                         stroke-linejoin="round" />
@@ -81,8 +81,8 @@
                         stroke="#fff" stroke-width="1.5" stroke-linejoin="round" />
                 </svg>
                 <span class="roboto-bold">Explore</span>
-            </div>
-            <div class="sidebar__btns__item">
+            </a>
+            <a href="#" class="sidebar__btns__item">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z"
@@ -92,8 +92,8 @@
                         stroke="#fff" stroke-width="1.5" />
                 </svg>
                 <span class="roboto-bold">Profile</span>
-            </div>
-            <div class="sidebar__btns__item">
+            </a>
+            <a href="#" class="sidebar__btns__item">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
                     <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                         stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
@@ -107,8 +107,8 @@
                     </g>
                 </svg>
                 <span class="roboto-bold">Premium</span>
-            </div>
-            <div class="sidebar__btns__item">
+            </a>
+            <a href="#" class="sidebar__btns__item">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M2 11.4C2 10.2417 2.24173 10 3.4 10H20.6C21.7583 10 22 10.2417 22 11.4V12.6C22 13.7583 21.7583 14 20.6 14H3.4C2.24173 14 2 13.7583 2 12.6V11.4Z"
@@ -121,16 +121,16 @@
                         stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
                 </svg>
                 <span class="roboto-bold">Lists</span>
-            </div>
-            <div class="sidebar__btns__item sidebar__btns__item--hidden">
+            </a>
+            <a href="#" class="sidebar__btns__item sidebar__btns__item--hidden">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4 17.9808V9.70753C4 6.07416 4 4.25748 5.17157 3.12874C6.34315 2 8.22876 2 12 2C15.7712 2 17.6569 2 18.8284 3.12874C20 4.25748 20 6.07416 20 9.70753V17.9808C20 20.2867 20 21.4396 19.2272 21.8523C17.7305 22.6514 14.9232 19.9852 13.59 19.1824C12.8168 18.7168 12.4302 18.484 12 18.484C11.5698 18.484 11.1832 18.7168 10.41 19.1824C9.0768 19.9852 6.26947 22.6514 4.77285 21.8523C4 21.4396 4 20.2867 4 17.9808Z"
                         stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 <span class="roboto-bold">Bookmarks</span>
-            </div>
-            <div class="sidebar__btns__item ">
+            </a>
+            <a href="#" class="sidebar__btns__item ">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M18.6161 20H19.1063C20.2561 20 21.1707 19.4761 21.9919 18.7436C24.078 16.8826 19.1741 15 17.5 15M15.5 5.06877C15.7271 5.02373 15.9629 5 16.2048 5C18.0247 5 19.5 6.34315 19.5 8C19.5 9.65685 18.0247 11 16.2048 11C15.9629 11 15.7271 10.9763 15.5 10.9312"
@@ -144,8 +144,8 @@
                 </svg>
 
                 <span class="roboto-bold">Communities</span>
-            </div>
-            <div class="sidebar__btns__item sidebar__btns__item--hidden">
+            </a>
+            <a href="#" class="sidebar__btns__item sidebar__btns__item--hidden">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M2 12C2 8.46252 2 6.69377 3.0528 5.5129C3.22119 5.32403 3.40678 5.14935 3.60746 4.99087C4.86213 4 6.74142 4 10.5 4H13.5C17.2586 4 19.1379 4 20.3925 4.99087C20.5932 5.14935 20.7788 5.32403 20.9472 5.5129C22 6.69377 22 8.46252 22 12C22 15.5375 22 17.3062 20.9472 18.4871C20.7788 18.676 20.5932 18.8506 20.3925 19.0091C19.1379 20 17.2586 20 13.5 20H10.5C6.74142 20 4.86213 20 3.60746 19.0091C3.40678 18.8506 3.22119 18.676 3.0528 18.4871C2 17.3062 2 15.5375 2 12Z"
@@ -157,7 +157,7 @@
                     <path d="M18 12L19 12" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
                 </svg>
                 <span class="roboto-bold">Monetization</span>
-            </div>
+            </a>
         </div>
         <div class="sidebar__dropdowns">
             <div class="sidebar__dropdowns__item">
@@ -215,7 +215,10 @@ let getProfileInfo = () => {
                         item.style.flexDirection = 'row';
                         item.style.alignItems = 'center';
                         item.style.gap = '0.8rem';
-                    } else if (item.classList.contains('sidebar__profile-info__add')) item.innerHTML = '<span>...</span>'
+                    } else if (item.classList.contains('sidebar__profile-info__add')){
+                        item.innerHTML = '<span>...</span>'
+                        item.style.border='0';
+                    } 
                 })
 
                 sidebar.appendChild(duplicatedItem);
@@ -335,6 +338,8 @@ onMounted(() => {
     align-items: center;
     gap: 1.5rem;
     padding: 1rem 0;
+    border-radius: 2rem;
+    transition: background 200ms linear;
 }
 
 .sidebar__btns__item--special,
@@ -345,6 +350,10 @@ onMounted(() => {
 .sidebar__btns__item span {
     color: var(--twitter-light);
     font-size: 1.4rem;
+}
+
+.sidebar__btns__item:hover,.sidebar__profile-info:hover{
+    background-color: var(--twitter-hover);
 }
 
 .sidebar__btns__item svg {
@@ -412,6 +421,11 @@ onMounted(() => {
     }
 }
 
+.sidebar__profile-info{
+    border-radius: 2rem;
+    transition: background 200ms linear;
+}
+
 @media screen and (min-width: 540px) and (max-width: 1199px) {
     .sidebar__btns__item span {
         display: none;
@@ -465,7 +479,7 @@ onMounted(() => {
     }
 
     .sidebar__btns__item {
-        padding: 0.6rem 0;
+        padding: 0.6rem;
     }
 
     .sidebar__btns__item--hidden {
@@ -492,6 +506,9 @@ onMounted(() => {
 
     .sidebar__profile-img {
         display: none !important;
+    }
+    .sidebar__profile-info{
+        padding: 0.6rem;
     }
 }
 </style>
