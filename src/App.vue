@@ -4,12 +4,14 @@ import navBar from './components/NavBar.vue'
 import sideBar from './components/SideBar.vue'
 import overlayPage from './components/Overlay.vue';
 import menuBar from './components/MenuBar.vue';
+import rightSideBar from './components/RightSideBar.vue';
 </script>
 
 <template>
   <div class="side-bar-nav">
     <side-bar></side-bar>
     <nav-bar></nav-bar>
+    <right-side-bar></right-side-bar>
   </div>
   <overlay-page></overlay-page>
   <menu-bar></menu-bar>

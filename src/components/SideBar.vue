@@ -246,6 +246,7 @@ onMounted(() => {
     position: absolute;
     top: 0;
     width: 70%;
+    min-width: 17rem;
     background-color: var(--twitter-dark);
     height: 100%;
     padding: 1rem;
@@ -254,7 +255,7 @@ onMounted(() => {
     transform: translateX(-100%);
     transition: transform 0.2s ease-in-out;
     z-index: 10;
-    border-right: 1px solid var(--twitter-gray);
+    border-right: 1px solid var(--twitter-hover);
 }
 
 .sidebar__post-btn {
@@ -404,9 +405,9 @@ onMounted(() => {
         height: 100vh;
         overflow-x: hidden;
         white-space: nowrap;
-        width: 5rem;
+        min-width: 3rem;
+        width: 12%;
         transform: translateX(0);
-
         .sidebar__btns__item--special,
         .sidebar__profile-img {
             display: flex;
@@ -458,8 +459,8 @@ onMounted(() => {
     .sidebar {
         display: flex;
         flex-direction: column;
-        width: 30%;
-        max-width: 18rem;
+        width: 35%;
+        max-width: 25rem;
         align-items: center;
         justify-content: flex-start;
         padding: 0.;

@@ -34,7 +34,7 @@
             </a>
         </div>
         <div class="nav__post-filter">
-            <a href="#" class="nav__post-filter__item roboto-regular"
+            <a href="#" class="nav__post-filter__item nav__post-filter__item-pad roboto-regular"
                 :class='{ "nav__post-filter__item--active": active0 == true }' @click.prevent="active0 = true; active1 = false">For
                 You</a>
             <a href="#" class="nav__post-filter__item  roboto-regular"
@@ -63,6 +63,7 @@
 import { useCounterStore } from '@/stores/counter';
 import { ref } from 'vue';
 
+
 const store = useCounterStore();
 let active0 = ref(true);
 let active1 = ref(false);
@@ -75,7 +76,7 @@ let active1 = ref(false);
     position: relative;
     justify-content: center;
     flex-direction: column;
-    border-bottom: 0.5px solid var(--twitter-gray);
+    border-bottom: 0.5px solid var(--twitter-hover);
 }
 
 .nav,
@@ -103,6 +104,7 @@ let active1 = ref(false);
 .nav__post-filter__item--active {
     color: var(--twitter-light);
     position:relative;
+    font-weight: bolder;
 }
 
 .nav__post-filter__item--active::after{
@@ -113,9 +115,6 @@ let active1 = ref(false);
     margin: 0.5rem 0;
     background-color: var(--twitter-blue);
 }
-
-
-
 
 .nav-brand-icon {
     display: block;
@@ -151,9 +150,14 @@ let active1 = ref(false);
 .nav-settings svg,
 .nav-profile__img,
 
-.nav-brand-icon svg,.nav__post-filter__item-special svg {
+.nav-brand-icon svg {
     width: 2rem;
     height: 2rem;
+}
+
+.nav__post-filter__item-special svg{
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 
@@ -171,8 +175,27 @@ let active1 = ref(false);
 }
 
 @media screen and (min-width: 540px) {
+    .nav{
+        height: 5rem;
+        position: sticky;
+        top: 0;
+
+    }
     .nav__post-filter{
-        width: calc(100vw - 18rem);
+        width: 100%;
+        height: 3rem;
+        max-width: 660px;
     }
 }
+
+@media screen and (min-width: 660px) {
+    .nav__post-filter{
+        position: absolute;
+        bottom: 0;
+    }
+    .nav__post-filter__item-pad {
+        padding: 0 0 0 5rem;
+    }
+}
+
 </style>
