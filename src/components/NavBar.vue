@@ -84,6 +84,8 @@ main{
     justify-content: center;
     flex-direction: column;
     border-bottom: 0.5px solid var(--twitter-hover);
+    background-color: var(--twitter-dark);
+    z-index: 10;
 }
 
 .nav,
