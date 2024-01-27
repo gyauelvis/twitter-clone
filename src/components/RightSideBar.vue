@@ -25,7 +25,8 @@
     max-width: 35rem;
     height: 100%;
     border-left: 1px solid var(--twitter-hover);
-    position: relative;
+    position: sticky;
+    top: 0;
     padding: 0rem 1rem 0 1rem;
     flex-direction: column;
     gap: 1rem;
