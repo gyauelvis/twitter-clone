@@ -5,6 +5,7 @@ import sideBar from './components/SideBar.vue'
 import overlayPage from './components/Overlay.vue';
 import menuBar from './components/MenuBar.vue';
 import rightSideBar from './components/RightSideBar.vue';
+
 </script>
 
 <template>

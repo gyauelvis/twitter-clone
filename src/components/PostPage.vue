@@ -158,6 +158,12 @@ onMounted(() => {
 
 
 <style scoped>
+
+@media screen and (max-width:540px){
+    section{
+        display: none;
+    }
+}
 section {
     padding: 1.5rem 2rem;
     min-height: 8rem;

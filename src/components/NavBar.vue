@@ -59,6 +59,7 @@
             </div>
         </section>
         <post-page></post-page>
+        <page-feed></page-feed>
     </main>
 </template>
 
@@ -66,6 +67,7 @@
 import { useCounterStore } from '@/stores/counter';
 import { ref } from 'vue';
 import postPage from './PostPage.vue'
+import PageFeed from './PageFeed.vue';
 
 
 const store = useCounterStore();
