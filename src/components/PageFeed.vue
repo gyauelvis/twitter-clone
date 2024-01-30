@@ -59,7 +59,7 @@
                                     <span>{{ store.postEntity.retweet }}</span>
                                 </div>
                             </a>
-                            <a href="#" class="like" @click.prevent="toggleEntity('like')">
+                            <a href="#" class="like">
                                 <div>
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -234,6 +234,14 @@ onMounted(() => {
                     align-items: center;
                     color: var(--twitter-gray);
                 }
+
+                @media screen and (max-width: 540px) {
+                    a div {
+                        gap: 0.5rem;
+                        
+                    }
+                }
+
                 .like:focus svg {
                     fill: var(--twitter-like);
                     stroke: var(--twitter-like);

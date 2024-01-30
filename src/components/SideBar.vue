@@ -243,7 +243,7 @@ onMounted(() => {
 
 <style scoped>
 .sidebar {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 70%;
     min-width: 17rem;
@@ -254,7 +254,7 @@ onMounted(() => {
     scroll-behavior: smooth;
     transform: translateX(-100%);
     transition: transform 0.2s ease-in-out;
-    z-index: 10;
+    z-index: 99;
     border-right: 1px solid var(--twitter-hover);
 }
 

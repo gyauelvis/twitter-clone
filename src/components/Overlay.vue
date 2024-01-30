@@ -11,11 +11,11 @@ const store = useCounterStore();
 <style scoped>
     a{
         display: none;
-        position: absolute;
+        position: fixed;
         width: 100%;
         background-color: #ffffff31;
         height: 100%;
-        z-index: 9;
+        z-index: 20;
         top:0;
     }
 </style>
