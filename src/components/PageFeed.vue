@@ -147,6 +147,13 @@ onMounted(() => {
             store.togglePostEntity('like');
         })
     })
+    
+    document.querySelectorAll('.like').forEach((el) => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.target.classList.toggle('like-activate');
+        })
+    })
 })
 </script>
 
@@ -238,13 +245,8 @@ onMounted(() => {
                 @media screen and (max-width: 540px) {
                     a div {
                         gap: 0.5rem;
-                        
-                    }
-                }
 
-                .like:focus svg {
-                    fill: var(--twitter-like);
-                    stroke: var(--twitter-like);
+                    }
                 }
             }
 
@@ -259,5 +261,10 @@ onMounted(() => {
             height: 1.2rem;
         }
     }
+}
+
+.like-activate {
+    fill: var(--twitter-like);
+    stroke: var(--twitter-like);
 }
 </style>

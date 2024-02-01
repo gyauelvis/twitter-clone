@@ -402,7 +402,7 @@ onMounted(() => {
         position: sticky;
         top: 0;
         left: 0;
-        height: 100vh;
+        min-height: 40rem;
         overflow-x: hidden;
         white-space: nowrap;
         min-width: 3rem;
