@@ -4,9 +4,9 @@ import { defineStore } from 'pinia'
 export const useCounterStore = defineStore('counter', () => {
     let sidebarStatus = ref(false);
     let postEntity = ref({
-        like: null,
-        comment:null,
-        retweet:null
+        like: 0,
+        comment:0,
+        retweet:0
     });
 
     let toggleSidebar = () => {

@@ -36,7 +36,8 @@
             </div>
             <div class="nav__post-filter">
                 <a href="#" class="nav__post-filter__item nav__post-filter__item-pad roboto-regular"
-                    :class='{ "nav__post-filter__item--active": active0 == true }' @click.prevent="active0 = true; active1 = false">For
+                    :class='{ "nav__post-filter__item--active": active0 == true }'
+                    @click.prevent="active0 = true; active1 = false">For
                     You</a>
                 <a href="#" class="nav__post-filter__item  roboto-regular"
                     :class='{ "nav__post-filter__item--active": active1 == true }'
@@ -59,7 +60,10 @@
             </div>
         </section>
         <post-page></post-page>
-        <page-feed></page-feed>
+        <suspense>
+            <page-feed></page-feed>
+        </suspense>
+
     </main>
 </template>
 
@@ -76,9 +80,10 @@ let active1 = ref(false);
 </script>
 
 <style scoped>
-main{
+main {
     width: 100%;
 }
+
 .nav {
     width: 100%;
     height: 7rem;
@@ -104,7 +109,7 @@ main{
     padding: 1rem 2rem;
 }
 
-.nav__post-filter__item-special{
+.nav__post-filter__item-special {
     display: none;
 }
 
@@ -115,14 +120,14 @@ main{
 
 .nav__post-filter__item--active {
     color: var(--twitter-light);
-    position:relative;
+    position: relative;
     font-weight: bolder;
 }
 
-.nav__post-filter__item--active::after{
-    content:'';
+.nav__post-filter__item--active::after {
+    content: '';
     display: block;
-    width:100%;
+    width: 100%;
     height: 2px;
     margin: 0.5rem 0;
     background-color: var(--twitter-blue);
@@ -167,7 +172,7 @@ main{
     height: 2rem;
 }
 
-.nav__post-filter__item-special svg{
+.nav__post-filter__item-special svg {
     width: 1.5rem;
     height: 1.5rem;
 }
@@ -177,23 +182,26 @@ main{
     .nav-container {
         display: none;
     }
-    .nav__post-filter{
+
+    .nav__post-filter {
         width: calc(100vw - 5rem);
     }
-    .nav__post-filter__item-special{
+
+    .nav__post-filter__item-special {
         display: block;
 
     }
 }
 
 @media screen and (min-width: 540px) {
-    .nav{
+    .nav {
         height: 5rem;
         position: sticky;
         top: 0;
 
     }
-    .nav__post-filter{
+
+    .nav__post-filter {
         width: 100%;
         height: 3rem;
         max-width: 660px;
@@ -201,13 +209,12 @@ main{
 }
 
 @media screen and (min-width: 660px) {
-    .nav__post-filter{
+    .nav__post-filter {
         position: absolute;
         bottom: 0;
     }
+
     .nav__post-filter__item-pad {
         padding: 0 0 0 5rem;
     }
-}
-
-</style>
+}</style>

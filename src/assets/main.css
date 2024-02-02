@@ -121,3 +121,114 @@ body {
     }
 }
 
+
+
+.feed-container {
+    .feed-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid var(--twitter-hover);
+        font-family: var(--primary-font);
+        color: var(--twitter-light);
+
+        .tweet-info {
+            display: flex;
+            flex-direction: column;
+            padding: 0 1rem;
+
+            .tweet__header {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5rem;
+                align-items: center;
+                padding-bottom: 0.2rem;
+
+                .name {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.5rem;
+                    align-items: center;
+
+                    .tweet__username a {
+                        color: var(--twitter-light);
+                        font-weight: bold;
+                        font-size: 1.1rem;
+                    }
+
+                    .profile__name a {
+                        color: var(--twitter-gray);
+                        font-size: 1rem;
+                    }
+                }
+
+                .tweet__time {
+                    color: var(--twitter-gray);
+                    font-size: 1rem;
+                }
+            }
+
+            .tweet__content {
+                line-height: 1.4rem;
+                font-weight: 400;
+                width: 100%;
+                position: relative;
+
+                .post-img {
+                    max-width: 100%;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                    margin: 0.5rem 0.2rem;
+                    border: 1px solid var(--twitter-hover);
+                }
+            }
+
+        }
+
+        .tweet__icons {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0 0 0;
+
+            .action-icons {
+                display: flex;
+                justify-content: space-between;
+                width: 70%;
+                align-items: center;
+
+                a div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 1rem;
+                    font-family: var(--primary-font);
+                    align-items: center;
+                    color: var(--twitter-gray);
+                }
+
+                @media screen and (max-width: 540px) {
+                    a div {
+                        gap: 0.5rem;
+
+                    }
+                }
+            }
+
+            .other-icons {
+                display: flex;
+                gap: 1rem;
+            }
+        }
+
+        .tweet__icons svg {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+}
+
+.like-activate {
+    fill: var(--twitter-like);
+    stroke: var(--twitter-like);
+}

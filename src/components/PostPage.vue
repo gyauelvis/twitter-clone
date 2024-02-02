@@ -158,12 +158,12 @@ onMounted(() => {
 
 
 <style scoped>
-
-@media screen and (max-width:540px){
-    section{
+@media screen and (max-width:540px) {
+    section {
         display: none;
     }
 }
+
 section {
     padding: 1.5rem 2rem;
     min-height: 8rem;
@@ -265,7 +265,8 @@ div:has(button)>a:disabled {
     font-size: 1rem;
     display: none;
 }
-.reply svg{
+
+.reply svg {
     width: 1.2rem;
     height: 1.2rem;
     margin: 0 0.2rem;

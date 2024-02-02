@@ -1,30 +1,59 @@
 <template>
     <div class="feed-container">
+        <div class="loader">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M18.001 20C16.3295 21.2558 14.2516 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 12.8634 21.8906 13.7011 21.6849 14.5003C21.4617 15.3673 20.5145 15.77 19.6699 15.4728C18.9519 15.2201 18.6221 14.3997 18.802 13.66C18.9314 13.1279 19 12.572 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19C13.3197 19 14.554 18.6348 15.6076 18"
+                    stroke="#1d9bf0" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import { useCounterStore } from '@/stores/counter';
+
+let imgValue = ref({
+    height: 200,
+    width: 200
+});
+
+let fetchPostData = async (url) => {
+    let res = await fetch(url);
+    let data = await res.json();
+    return data;
+}
+
+const postContent = await fetchPostData('https://jsonplaceholder.typicode.com/posts');
+const { users } = await fetchPostData('https://dummyjson.com/users');
+const { results } = await fetchPostData('https://randomuser.me/api/?page=3&results=30&seed=abc');
+let renderData = () => {
+    for (let i = 0; i < 30; i++) {
+        let postTemplate = `
         <div class="feed-card">
             <div class="feed-card__profile-img">
-                <img :src="'profile.jpg'" alt="" class="nav-profile__img">
+                <img src="${results[i].picture.thumbnail}" alt="" class="nav-profile__img">
             </div>
             <div class="feed-card__tweet">
                 <div class="tweet-info">
                     <div class="tweet__header">
                         <div class="name">
                             <span class="tweet__username">
-                                <a href="#">g.elvis</a>
+                                <a href="#">${users[i].firstName} ${users[i].lastName}</a>
                             </span>
                             <span class="profile__name">
-                                <a href="#">@gyauboahen</a>
+                                <a href="#">@${users[i].username}</a>
                             </span>
                         </div>
                         <span class="tweet__time">Jan 27</span>
                     </div>
                     <div class="tweet__content">
                         <span class="text-content">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia blanditiis ducimus doloribus
-                            labore
-                            ipsa et possimus in obcaecati mollitia debitis?
+                            ${postContent[i].body}
                         </span>
                         <div class="img-content">
-                            <img :src="'inlove.png'" alt="" class="post-img">
+                            <img src="https://picsum.photos/${((imgValue.value.width += 50) >= 800) ? imgValue.value.width = 200 : imgValue.value.width += 50}/${((imgValue.value.height += 20) >= 500) ? (imgValue.value.height = 150) : (imgValue.value.height += 20)}" alt="" class="post-img">
                         </div>
 
                     </div>
@@ -40,7 +69,7 @@
                                             d="M6.09881 19C4.7987 18.8721 3.82475 18.4816 3.17157 17.8284C2 16.6569 2 14.7712 2 11V10.5C2 6.72876 2 4.84315 3.17157 3.67157C4.34315 2.5 6.22876 2.5 10 2.5H14C17.7712 2.5 19.6569 2.5 20.8284 3.67157C22 4.84315 22 6.72876 22 10.5V11C22 14.7712 22 16.6569 20.8284 17.8284C19.6569 19 17.7712 19 14 19C13.4395 19.0125 12.9931 19.0551 12.5546 19.155C11.3562 19.4309 10.2465 20.0441 9.14987 20.5789C7.58729 21.3408 6.806 21.7218 6.31569 21.3651C5.37769 20.6665 6.29454 18.5019 6.5 17.5"
                                             stroke="#71767b" stroke-width="1.5" stroke-linecap="round" />
                                     </svg>
-                                    <span>{{ store.postEntity.comment }}</span>
+                                    <span>${(users[i].age - 29 < 0) ? 0 : users[i].age - 13}</span>
                                 </div>
                             </a>
                             <a href="" class="retweet" @click.prevent="toggleEntity('retweet')">
@@ -56,7 +85,7 @@
                                             stroke="#71767b" stroke-width="1.5" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-                                    <span>{{ store.postEntity.retweet }}</span>
+                                    <span>${(users[i].age - 29 < 0) ? 0 : users[i].age - 29}</span>
                                 </div>
                             </a>
                             <a href="#" class="like">
@@ -67,7 +96,7 @@
                                             d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z"
                                             stroke="#71767B" stroke-width="1.5" stroke-linecap="round" />
                                     </svg>
-                                    <span>{{ store.postEntity.like }}</span>
+                                    <span>${users[i].age}</span>
                                 </div>
                             </a>
                             <a href="#" class="views">
@@ -121,150 +150,55 @@
                 </div>
             </div>
         </div>
-    </div>
-</template>
-
-<script setup>
-import { ref, onMounted } from 'vue'
-import { useCounterStore } from '@/stores/counter';
-
-let store = useCounterStore();
-let clonePosts = () => {
-    let feedCard = document.querySelector('.feed-card')
-    for (let i = 0; i < 10; i++) {
-        let feedCardClone = feedCard.cloneNode(true);
-        feedCard.parentNode.insertBefore(feedCardClone, feedCard.nextSibling)
+        `
+        document.querySelector('.feed-container').innerHTML += postTemplate;
     }
 }
+
+
+let store = useCounterStore();
 
 let toggleEntity = (arg) => store.togglePostEntity(arg);
 
 onMounted(() => {
-    clonePosts();
+    setTimeout(() => {
+        document.querySelector('.feed-container').innerHTML = '';
+        renderData();
+    }, 2000)
     document.querySelectorAll('.action-icons').forEach((el) => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
             store.togglePostEntity('like');
         })
     })
-    
+
     document.querySelectorAll('.like').forEach((el) => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
             e.target.classList.toggle('like-activate');
         })
     })
+
 })
 </script>
 
 <style scoped>
-.feed-container {
-    .feed-card {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem;
-        border-bottom: 1px solid var(--twitter-hover);
-        font-family: var(--primary-font);
-        color: var(--twitter-light);
 
-        .tweet-info {
-            display: flex;
-            flex-direction: column;
-            padding: 0 1rem;
-
-            .tweet__header {
-                display: flex;
-                flex-direction: row;
-                gap: 0.5rem;
-                align-items: center;
-                padding-bottom: 0.2rem;
-
-                .name {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 0.5rem;
-                    align-items: center;
-
-                    .tweet__username a {
-                        color: var(--twitter-light);
-                        font-weight: bold;
-                        font-size: 1.1rem;
-                    }
-
-                    .profile__name a {
-                        color: var(--twitter-gray);
-                        font-size: 1rem;
-                    }
-                }
-
-                .tweet__time {
-                    color: var(--twitter-gray);
-                    font-size: 1rem;
-                }
-            }
-
-            .tweet__content {
-                line-height: 1.4rem;
-                font-weight: 400;
-                width: 100%;
-                position: relative;
-
-                .post-img {
-                    max-width: 100%;
-                    object-fit: cover;
-                    border-radius: 1rem;
-                    margin: 0.5rem 0.2rem;
-                    border: 1px solid var(--twitter-hover);
-                }
-            }
-
-        }
-
-        .tweet__icons {
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem 0 0 0;
-
-            .action-icons {
-                display: flex;
-                justify-content: space-between;
-                width: 70%;
-                align-items: center;
-
-                a div {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    gap: 1rem;
-                    font-family: var(--primary-font);
-                    align-items: center;
-                    color: var(--twitter-gray);
-                }
-
-                @media screen and (max-width: 540px) {
-                    a div {
-                        gap: 0.5rem;
-
-                    }
-                }
-            }
-
-            .other-icons {
-                display: flex;
-                gap: 1rem;
-            }
-        }
-
-        .tweet__icons svg {
-            width: 1.2rem;
-            height: 1.2rem;
-        }
-    }
+.loader{
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+}
+.loader svg{
+    animation: spin 800ms linear infinite;
 }
 
-.like-activate {
-    fill: var(--twitter-like);
-    stroke: var(--twitter-like);
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 </style>
