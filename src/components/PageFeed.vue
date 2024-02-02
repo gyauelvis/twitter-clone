@@ -40,7 +40,7 @@ let renderData = () => {
                     <div class="tweet__header">
                         <div class="name">
                             <span class="tweet__username">
-                                <a href="#">${users[i].firstName} ${users[i].lastName}</a>
+                                <a href="#">${users[i].firstName}</a>
                             </span>
                             <span class="profile__name">
                                 <a href="#">@${users[i].username}</a>
